@@ -1,0 +1,59 @@
+#intro {
+  position: relative;
+  height: 100vh;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  background-image: url('http://communications.oregonstate.edu/sites/communications.oregonstate.edu/files/social_background.jpeg');
+  animation: animatedBackground 20s linear infinite;
+}
+@keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 600px 0; }
+}
+
+
+.decode-text{
+  width: 100%;
+  font-size: 50px;
+  text-align: center;
+  padding-top:20%;
+}
+.space{
+  display:inline-block;
+  width:10px;
+}
+.text-animation{
+  display:inline-block;
+  color: transparent;
+  text-transform:uppercase;
+  &:before{
+    content: '';
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #0e182d;
+    width: 0;
+    height: 1.2em;
+    transform: translate(-50%,-55%);
+  }
+
+  &.state-1{
+    &:before{
+        width:1px;
+    }
+  }
+  &.state-2{
+    &:before{
+        width:.9em;
+    }
+  }
+  &.state-3{
+    color: #fff;
+    &:before{
+        width:0;
+    }
+  }
+  
+}
